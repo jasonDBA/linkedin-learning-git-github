@@ -25,5 +25,6 @@
 * __$git status__ displays the state of the working directory and the staging area.
 * __$git diff__ to view changes you added to your worktree and staging area from the last commit.
 * __$git diff --staged__ only shows changes to the files in __"staging"__ area.
+* __$git diff --color-words__ used to highlight the changed parts only (NOT entire paragraphs but more specific parts).
 * __$git rm__ used to remove a file from a Git repository.
 * __$git mv__ this often is used to __rename__ files.
