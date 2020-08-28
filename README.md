@@ -21,3 +21,9 @@
 * We can track our values by the help of this specific ID
 * __HOW?__ When the file is added to our repo, Git generates __the checksum__ for each change and the checksum algo __converts data into a simple number.__ If we change something, the data changes, meaning the checksum changes as well.
 
+### Git Commands
+* __$git status__ displays the state of the working directory and the staging area.
+* __$git diff__ to view changes you added to your worktree and staging area from the last commit.
+* __$git diff --staged__ only shows changes to the files in __"staging"__ area.
+* __$git rm__ used to remove a file from a Git repository.
+* __$git mv__ this often is used to __rename__ files.
