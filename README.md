@@ -8,6 +8,7 @@
 
 ### Three trees architecture in Git
 * Working Directory - Staging Index - Repository
+* NOTE: Once you add the files to staging area, you can keep track of all changes in the file.
 
 ### Git Workflow
 1. __$git init__ Create a working directory (.git)
@@ -28,3 +29,47 @@
 * __$git diff --color-words__ used to highlight the changed parts only (NOT entire paragraphs but more specific parts).
 * __$git rm__ used to remove a file from a Git repository.
 * __$git mv__ this often is used to __rename__ files.
+
+### Git Stage and Commit Shortcut
+* Typically, you can go through two phases to commit the files as follows:
+1. __$git add .__ Add all the files from your working dir to the staging area
+2. __$git commit -m "Your Message"__ Commit the files to your repo
+* Alternatively, there is a shortcut instead -> __$git commit -am "Your Message"__
+
+### How to see the difference of the previous commit?
+1. Type __$git log__. It will show all logs of your commit with reference ID
+2. Type __$git show [reference ID] --color-words__. Can see the difference of the specified commit. --color-words will allow you to see only specific changed parts.
+
+### How to write multi lines of commit?
+1. Type __$git commit -a__ or __$git commit -all__
+2. Will move to VI mode
+3. Enter __i__ to insert your commit lines
+4. Once completed, press __esc__ to escape
+5. Type __:wq__. __w__ used to save the commit and __q__ used to quit the vi mode
+6. Type __$git log__ to verify the multi lines of your commit
+
+### How to undo working directory changes?
+* If you change something in the file by accident or on purpose, you can always __retore back__ by using:
+* $git checkout -- <file name>
+* This is used to discard changes in working directory.
+
+### How to unstage files?
+* $git reset HEAD <file name>
+  
+### How to modify the most recent commit?
+* $git commit -amend -m "Your Modified Message"
+* It lets you combine staged changes with the previous commit instead of creating an entirely new commit.
+* It can also be used to simply edit the previous commit message without changing its snapshot.
+
+### About .gitignore
+* List of rules to determine which files to ignore
+* The purpose of using this is to ensure that certain files not tracked by Git remain untracked
+* It follows a pattern format - meaning a __regular expression__
+* Examples & More Details: https://git-scm.com/docs/gitignore
+
+### How to ignore tracked files?
+* If you have already completed to add the file and commit the change, the file is being tracked.
+* In this case, even though putting the name of the file into .gitignore, all changes of the file is being tracked as it is already in a staging area.
+* To ignore this tracked file, you can use the following command:
+* $git rm --cached <file name>
+  
