@@ -22,6 +22,22 @@
 * We can track our values by the help of this specific ID
 * __HOW?__ When the file is added to our repo, Git generates __the checksum__ for each change and the checksum algo __converts data into a simple number.__ If we change something, the data changes, meaning the checksum changes as well.
 
+
+### Setting up Git Online Repository
+1. Sign up for an account either at Bitbucket (https://bitbucket.org) or GitHub (https://github.com).
+2. Set the local Git repository to set its remote origin:
+```
+$git remote add origin <repository URL>
+```
+3. Pushing your commits to the online repository
+```
+$git push -u origin master
+```
+4. Cloning an online repository
+```
+$git clone <repository URL>
+```
+
 ### Git Commands
 * __$git status__ displays the state of the working directory and the staging area.
 * __$git diff__ to view changes you added to your worktree and staging area from the last commit.
